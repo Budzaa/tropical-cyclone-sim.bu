@@ -583,16 +583,13 @@ DesignationSystem.southAtlantic = new DesignationSystem({
     ]
 });
 
-// This is somewhat inaccurate but it works for now
 DesignationSystem.mediterranean = new DesignationSystem({
     displayName: 'Mediterranean',
     suffix: 'M',
     annual: true,
-    anchor: 2021,
     mainLists: [
-        ['Apollo', 'Bianca', 'Ciril', 'Diana', 'Enea', 'Fedra', 'Goran', 'Hera', 'Ivan', 'Lina', 'Marco', 'Nada', 'Ole', 'Pandora', 'Remo', 'Sandra', 'Teodor', 'Ursula', 'Vito', 'Zora'],
-        ['Ana', 'Bogdan', 'Clio', 'Dino', 'Eva', 'Fobos', 'Gaia', 'Helios', 'Ilina', 'Leon', 'Minerva', 'Nino', 'Olga', 'Petar', 'Rea', 'Silvan', 'Talia', 'Ugo', 'Vesta', 'Zenon'],
-        ['Alexis', 'Bettina', 'Ciro', 'Dorothea', 'Emil', 'Fedra', 'Gori', 'Helga', 'Italo', 'Lilith', 'Marco', 'Nada', 'Ole', 'Palmira', 'Rocky', 'Shirlene', 'Tino', 'Ute', 'Vito', 'Zena']
+        ['Apollo', 'Blas', 'Celeno', 'Daniel', 'Ianos', 'Leucosia', 'Naoise', 'Querina', 'Quirino', 'Rafi', 'Tilly', 'Zoe'],
+        ['Aurore', 'Bert', 'Cornelia', 'Darragh', 'Izzy', 'Lewis','Numa', 'Qendresa', 'Querida', 'Rolf', 'Trixi', 'Zorbas']
     ]
 });
 

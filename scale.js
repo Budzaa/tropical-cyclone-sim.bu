@@ -681,13 +681,101 @@ Scale.southwestIndianOcean = new Scale({
     ]
 });
 
+Scale.medicaneSC = new Scale({
+    displayName: 'Medicane',
+    flavorDisplayNames: ['Medicane'],
+    classifications: [
+        {
+            threshold: 0,
+            color: '$TD',
+            subtropicalColor: '$SD',
+            symbol: 'DI',
+            subtropicalSymbol: 'SDI',
+            arms: 1,
+            stormNom: 'Tropical Disturbance',
+            subtropicalStormNom: 'Subtropical Disturbance',
+            stat: 'Disturbances',
+            cName: 'Disturbance'
+        },
+        {
+            threshold: 34,
+            color: '$TS',
+            subtropicalColor: '$SS',
+            symbol: 'WM',
+            subtropicalSymbol: 'WSM',
+            stormNom: 'Weak Medicane',
+            subtropicalStormNom: 'Weak Submedicane',
+            stat: 'Named Medicanes',
+            cName: 'Weak'
+        },
+        {
+            threshold: 44,
+            color: '$STS',
+            subtropicalColor: '$SSS',
+            symbol: 'M',
+            subtropicalSymbol: 'SM',
+            stormNom: 'Medicane',
+            subtropicalStormNom: 'Submedicane',
+            stat: 'Proper Medicanes',
+            cName: 'Proper'
+        },
+        {
+            threshold: 62,
+            color: '$C1',
+            symbol: 'SM',
+            subtropicalSymbol: 'SSM',
+            stormNom: 'Strong Medicane',
+            subtropicalStormNom: 'Strong Submedicane',
+            cName: 'Strong'
+        },
+        {
+            threshold: 79,
+            color: '$C2',
+            symbol: 'MM',
+            subtropicalSymbol: 'MSM',
+            stormNom: 'Major Medicane',
+            subtropicalStormNom: 'Major Submedicane',
+            stat: 'Major Medicanes',
+            cName: 'Major'
+        },
+        {
+            threshold: 95,
+            color: '$C3',
+            symbol: 'EM',
+            subtropicalSymbol: 'ESM',
+            stormNom: 'Extreme Medicane',
+            subtropicalStormNom: 'Extreme Submedicane',
+            stat: 'Extreme Medicanes',
+            cName: 'Extreme'
+        },
+        {
+            threshold: 110,
+            color: '$C4',
+            symbol: 'EM',
+            subtropicalSymbol: 'ESM',
+            cName: 'Extreme'
+        },
+        {
+            threshold: 127,
+            color: '$C5',
+            symbol: 'SM',
+            subtropicalSymbol: 'SSM',
+            stormNom: 'Super Medicane',
+            subtropicalStormNom: 'Super Submedicane',
+            stat: 'Super Medicanes',
+            cName: 'Super'
+        }
+    ]
+});
+
 Scale.presetScales = [
     Scale.saffirSimpson,
     Scale.extendedSaffirSimpson,
     Scale.australian,
     Scale.JMA,
     Scale.IMD,
-    Scale.southwestIndianOcean
+    Scale.southwestIndianOcean,
+    Scale.medicaneSC
 ];
 
 // -- Color Schemes -- //
@@ -769,6 +857,58 @@ const COLOR_SCHEMES = [
             'C9': '#9B30FF',
             'C10': '#F9A7B0',
             'HYC': '#ff99ff'
+        }
+    },
+    {
+        name: 'Zoom Earth',
+        values: {
+            'TDi': '#7722FF',
+            'SDi': '#7722FF',
+            'TD': '#0A84FF',
+            'SD': '#0A84FF',
+            'TS': '#00F060',
+            'SS': '#00F060',
+            'STS': '#FFCC00',
+            'SSS': '#FFCC00',
+            'TY': '#FF8800',
+            'VSTY': '#FF0022',
+            'C1': '#FFCC00',
+            'C2': '#FF8800',
+            'C3': '#FF5500',
+            'C4': '#FF0022',
+            'C5': '#FF55BB',
+            'C6': '#FF55BB',
+            'C7': '#800080',
+            'C8': '#800080',
+            'C9': '#800080',
+            'C10': '#000000',
+            'HYC': '#000000'
+        }
+    },
+    {
+        name: 'Force Thirteen',
+        values: {
+            'TDi': '#7597CF',
+            'SDi': '#7597CF',
+            'TD': '#6EC1EA',
+            'SD': '#D337FF',
+            'TS': '#11FF01',
+            'SS': '#BDFEBA',
+            'STS': '#74E904',
+            'SSS': '#FAFEBA',
+            'TY': '#DBB705',
+            'VSTY': '#FF2F01',
+            'C1': '#FFF102',
+            'C2': '#DBB705',
+            'C3': '#F68B00',
+            'C4': '#FF2F01',
+            'C5': '#FF0089',
+            'C6': '#D738FF',
+            'C7': '#7C35FE',
+            'C8': '#4137FB',
+            'C9': '#A5D7FF',
+            'C10': '#F3F3A1',
+            'HYC': '#003E00'
         }
     }
 ];
