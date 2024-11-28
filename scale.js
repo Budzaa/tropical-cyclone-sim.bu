@@ -403,6 +403,119 @@ Scale.extendedSaffirSimpson = new Scale({
     ]
 });
 
+Scale.SaffirSimpsonGolbach = new Scale({
+    displayName: 'Saffir-Simpson-Golbach',
+    flavorDisplayNames: ['Hurricane'],
+    classifications: [
+        {
+            threshold: 0,
+            color: '$TD',
+            subtropicalColor: '$SD',
+            symbol: 'D',
+            arms: 0,
+            stormNom: 'Tropical Depression',
+            subtropicalStormNom: 'Subtropical Depression',
+            stat: 'Depressions',
+            cName: 'Depression'
+        },
+        {
+            threshold: 34,
+            color: '$TS',
+            subtropicalColor: '$SS',
+            symbol: 'S',
+            stormNom: 'Tropical Storm',
+            subtropicalStormNom: 'Subtropical Storm',
+            stat: 'Named Storms',
+            cName: 'Storm'
+        },
+        {
+            threshold: 64,
+            color: '$C1',
+            symbol: '1',
+            stormNom: 'Hurricane',
+            stat: 'Hurricanes',
+            cName: 'Category 1'
+        },
+        {
+            threshold: 83,
+            color: '$C2',
+            symbol: '2',
+            cName: 'Category 2'
+        },
+        {
+            threshold: 96,
+            color: '$C3',
+            symbol: '3',
+            stormNom: 'Major Hurricane',
+            stat: 'Major Hurricanes',
+            cName: 'Category 3'
+        },
+        {
+            threshold: 113,
+            color: '$C4',
+            symbol: '4',
+            cName: 'Category 4'
+        },
+        {
+            threshold: 137,
+            color: '$C5',
+            symbol: '5',
+            stat: 'Category 5s',
+            cName: 'Category 5'
+        },
+        {
+            threshold: 165,
+            color: '$C6',
+            symbol: '6',
+            stormNom: 'Extreme Hurricane',
+            stat: 'Extreme Hurricanes',
+            cName: 'Category 6'
+        },
+        {
+            threshold: 190,
+            color: '$C7',
+            symbol: '7',
+            cName: 'Category 7'
+        },
+        {
+            threshold: 215,
+            color: '$C8',
+            symbol: 'HY1',
+            stormNom: 'Hypercane',
+            stat: 'Hypercanes',
+            cName: 'Category 1 Hypercane'
+        },
+        {
+            threshold: 261,
+            color: '$C9',
+            symbol: 'HY2',
+            cName: 'Category 2 Hypercane'
+        },
+        {
+            threshold: 309,
+            color: '$C10',
+            symbol: 'HY3',
+            stormNom: 'Major Hypercane',
+            stat: 'Major Hypercanes',
+            cName: 'Category 3 Hypercane'
+        },
+        {
+            threshold: 350,
+            color: '$HYC',
+            symbol: 'HY4',
+            cName: 'Category 4 Hypercane'
+        },
+        {
+            threshold: 396,
+            color: '#000000',
+            symbol: 'HY5',
+            stormNom: 'Ultimate Hypercane',
+            stat: 'Category 5 Hypercanes',
+            cName: 'Category 5 Hypercane'
+        }
+    ]
+});
+
 Scale.australian = new Scale({
     measure: SCALE_MEASURE_TEN_MIN_KNOTS,
     displayName: 'Australian',
@@ -771,6 +884,7 @@ Scale.medicaneSC = new Scale({
 Scale.presetScales = [
     Scale.saffirSimpson,
     Scale.extendedSaffirSimpson,
+    Scale.SaffirSimpsonGolbach,
     Scale.australian,
     Scale.JMA,
     Scale.IMD,
@@ -865,9 +979,9 @@ const COLOR_SCHEMES = [
             'TDi': '#7722FF',
             'SDi': '#7722FF',
             'TD': '#0A84FF',
-            'SD': '#0A84FF',
+            'SD': '#A000F9',
             'TS': '#00F060',
-            'SS': '#00F060',
+            'SS': '#00F09B',
             'STS': '#FFCC00',
             'SSS': '#FFCC00',
             'TY': '#FF8800',
