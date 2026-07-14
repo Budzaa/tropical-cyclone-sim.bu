@@ -14,7 +14,7 @@ const PERLIN_ZOOM = 100;    // Resolution for perlin noise
 const TICK_DURATION = 3600000;  // How long in sim time does a tick last in milliseconds (1 hour)
 const ADVISORY_TICKS = 6;    // Number of ticks per advisory
 const YEAR_LENGTH = 365.2425*24;        // The length of a year in ticks; used for seasonal activity
-const STEP = 41.06;            // Number of milliseconds in real time a simulation step lasts at default speed
+const STEP = 42;            // Number of milliseconds in real time a simulation step lasts at default speed
 const NHEM_DEFAULT_YEAR = moment.utc().year();
 const SHEM_DEFAULT_YEAR = moment.utc().month() < 6 ? NHEM_DEFAULT_YEAR : NHEM_DEFAULT_YEAR+1;
 const DEPRESSION_LETTER = "H";
@@ -187,7 +187,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.wpac,
         optionPresets: {
             hem: 1,
-            scale: 3,
+            scale: 4,
             designations: 3
 
 
@@ -219,7 +219,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.nhem,
         optionPresets: {
             hem: 1,
-            scale: 3,
+            scale: 4,
             designations: 3
 
 
@@ -236,7 +236,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.nhem,
         optionPresets: {
             hem: 1,
-            scale: 3,
+            scale: 4,
             designations: 3
 
 
@@ -252,7 +252,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.nio,
         optionPresets: {
             hem: 1,
-            scale: 4,
+            scale: 5,
             designations: 5
 
 
@@ -268,7 +268,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.nio,
         optionPresets: {
             hem: 1,
-            scale: 4,
+            scale: 5,
             designations: 5
 
 
@@ -285,7 +285,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.nhem,
         optionPresets: {
             hem: 1,
-            scale: 3,
+            scale: 4,
             designations: 3
 
 
@@ -302,7 +302,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.aus,
         optionPresets: {
             hem: 2,
-            scale: 2,
+            scale: 3,
             designations: 6
 
 
@@ -318,7 +318,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.spac,
         optionPresets: {
             hem: 2,
-            scale: 2,
+            scale: 3,
             designations: 7
 
 
@@ -335,7 +335,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.shem,
         optionPresets: {
             hem: 2,
-            scale: 2,
+            scale: 3,
             designations: 7
 
 
@@ -351,7 +351,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.swio,
         optionPresets: {
             hem: 2,
-            scale: 5,
+            scale: 6,
             designations: 8
 
 
@@ -367,7 +367,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.shem,
         optionPresets: {
             hem: 2,
-            scale: 5,
+            scale: 6,
             designations: 8
 
 
@@ -383,7 +383,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.shem,
         optionPresets: {
             hem: 2,
-            scale: 5,
+            scale: 6,
             designations: 8
 
 
@@ -449,7 +449,7 @@ const MAP_TYPES = [     // Land generation controls and option presets for diffe
         mainSubBasin: EARTH_SB_IDS.medi,
         optionPresets: {
             hem: 1,
-            scale: 0,
+            scale: 7,
             designations: 10
 
 

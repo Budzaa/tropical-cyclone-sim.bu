@@ -403,6 +403,119 @@ Scale.extendedSaffirSimpson = new Scale({
     ]
 });
 
+Scale.SaffirSimpsonGolbach = new Scale({
+    displayName: 'Saffir-Simpson-Golbach',
+    flavorDisplayNames: ['Hurricane'],
+    classifications: [
+        {
+            threshold: 0,
+            color: '$TD',
+            subtropicalColor: '$SD',
+            symbol: 'D',
+            arms: 0,
+            stormNom: 'Tropical Depression',
+            subtropicalStormNom: 'Subtropical Depression',
+            stat: 'Depressions',
+            cName: 'Depression'
+        },
+        {
+            threshold: 34,
+            color: '$TS',
+            subtropicalColor: '$SS',
+            symbol: 'S',
+            stormNom: 'Tropical Storm',
+            subtropicalStormNom: 'Subtropical Storm',
+            stat: 'Named Storms',
+            cName: 'Storm'
+        },
+        {
+            threshold: 64,
+            color: '$C1',
+            symbol: '1',
+            stormNom: 'Hurricane',
+            stat: 'Hurricanes',
+            cName: 'Category 1'
+        },
+        {
+            threshold: 83,
+            color: '$C2',
+            symbol: '2',
+            cName: 'Category 2'
+        },
+        {
+            threshold: 96,
+            color: '$C3',
+            symbol: '3',
+            stormNom: 'Major Hurricane',
+            stat: 'Major Hurricanes',
+            cName: 'Category 3'
+        },
+        {
+            threshold: 113,
+            color: '$C4',
+            symbol: '4',
+            cName: 'Category 4'
+        },
+        {
+            threshold: 137,
+            color: '$C5',
+            symbol: '5',
+            stat: 'Category 5s',
+            cName: 'Category 5'
+        },
+        {
+            threshold: 165,
+            color: '$C6',
+            symbol: '6',
+            stormNom: 'Extreme Hurricane',
+            stat: 'Extreme Hurricanes',
+            cName: 'Category 6'
+        },
+        {
+            threshold: 190,
+            color: '$C7',
+            symbol: '7',
+            cName: 'Category 7'
+        },
+        {
+            threshold: 215,
+            color: '$C8',
+            symbol: 'HY1',
+            stormNom: 'Hypercane',
+            stat: 'Hypercanes',
+            cName: 'Category 1 Hypercane'
+        },
+        {
+            threshold: 261,
+            color: '$C9',
+            symbol: 'HY2',
+            cName: 'Category 2 Hypercane'
+        },
+        {
+            threshold: 309,
+            color: '$C10',
+            symbol: 'HY3',
+            stormNom: 'Major Hypercane',
+            stat: 'Major Hypercanes',
+            cName: 'Category 3 Hypercane'
+        },
+        {
+            threshold: 350,
+            color: '$HYC',
+            symbol: 'HY4',
+            cName: 'Category 4 Hypercane'
+        },
+        {
+            threshold: 396,
+            color: '#000000',
+            symbol: 'HY5',
+            stormNom: 'Ultimate Hypercane',
+            stat: 'Category 5 Hypercanes',
+            cName: 'Category 5 Hypercane'
+        }
+    ]
+});
+
 Scale.australian = new Scale({
     measure: SCALE_MEASURE_TEN_MIN_KNOTS,
     displayName: 'Australian',
@@ -681,13 +794,102 @@ Scale.southwestIndianOcean = new Scale({
     ]
 });
 
+Scale.medicaneSC = new Scale({
+    displayName: 'Medicane',
+    flavorDisplayNames: ['Medicane'],
+    classifications: [
+        {
+            threshold: 0,
+            color: '$TD',
+            subtropicalColor: '$SD',
+            symbol: 'DI',
+            subtropicalSymbol: 'SDI',
+            arms: 1,
+            stormNom: 'Tropical Disturbance',
+            subtropicalStormNom: 'Subtropical Disturbance',
+            stat: 'Disturbances',
+            cName: 'Disturbance'
+        },
+        {
+            threshold: 34,
+            color: '$TS',
+            subtropicalColor: '$SS',
+            symbol: 'WM',
+            subtropicalSymbol: 'WSM',
+            stormNom: 'Weak Medicane',
+            subtropicalStormNom: 'Weak Submedicane',
+            stat: 'Named Medicanes',
+            cName: 'Weak'
+        },
+        {
+            threshold: 44,
+            color: '$STS',
+            subtropicalColor: '$SSS',
+            symbol: 'M',
+            subtropicalSymbol: 'SM',
+            stormNom: 'Medicane',
+            subtropicalStormNom: 'Submedicane',
+            stat: 'Proper Medicanes',
+            cName: 'Proper'
+        },
+        {
+            threshold: 62,
+            color: '$C1',
+            symbol: 'SM',
+            subtropicalSymbol: 'SSM',
+            stormNom: 'Strong Medicane',
+            subtropicalStormNom: 'Strong Submedicane',
+            cName: 'Strong'
+        },
+        {
+            threshold: 79,
+            color: '$C2',
+            symbol: 'MM',
+            subtropicalSymbol: 'MSM',
+            stormNom: 'Major Medicane',
+            subtropicalStormNom: 'Major Submedicane',
+            stat: 'Major Medicanes',
+            cName: 'Major'
+        },
+        {
+            threshold: 95,
+            color: '$C3',
+            symbol: 'EM',
+            subtropicalSymbol: 'ESM',
+            stormNom: 'Extreme Medicane',
+            subtropicalStormNom: 'Extreme Submedicane',
+            stat: 'Extreme Medicanes',
+            cName: 'Extreme'
+        },
+        {
+            threshold: 110,
+            color: '$C4',
+            symbol: 'EM',
+            subtropicalSymbol: 'ESM',
+            cName: 'Extreme'
+        },
+        {
+            threshold: 127,
+            color: '$C5',
+            symbol: 'SM',
+            subtropicalSymbol: 'SSM',
+            stormNom: 'Super Medicane',
+            subtropicalStormNom: 'Super Submedicane',
+            stat: 'Super Medicanes',
+            cName: 'Super'
+        }
+    ]
+});
+
 Scale.presetScales = [
     Scale.saffirSimpson,
     Scale.extendedSaffirSimpson,
+    Scale.SaffirSimpsonGolbach,
     Scale.australian,
     Scale.JMA,
     Scale.IMD,
-    Scale.southwestIndianOcean
+    Scale.southwestIndianOcean,
+    Scale.medicaneSC
 ];
 
 // -- Color Schemes -- //
@@ -803,9 +1005,9 @@ const COLOR_SCHEMES = [
             'TDi': '#7722FF',
             'SDi': '#7722FF',
             'TD': '#0A84FF',
-            'SD': '#0A84FF',
+            'SD': '#A000F9',
             'TS': '#00F060',
-            'SS': '#00F060',
+            'SS': '#00F09B',
             'STS': '#FFCC00',
             'SSS': '#FFCC00',
             'TY': '#FF8800',
@@ -815,7 +1017,7 @@ const COLOR_SCHEMES = [
             'C3': '#FF5500',
             'C4': '#FF0022',
             'C5': '#FF55BB',
-            'C6': '#FF55BB',
+            'C6': '#FF55BB', // everything C6 and above is hypothetical
             'C7': '#800080',
             'C8': '#800080',
             'C9': '#800080',
@@ -824,7 +1026,7 @@ const COLOR_SCHEMES = [
         }
     },
     {
-        name: 'Force Thirteen',
+        name: 'Force Thirteen', // made by me (?)
         values: {
             'TDi': '#7597CF',
             'SDi': '#7597CF',
@@ -841,7 +1043,7 @@ const COLOR_SCHEMES = [
             'C3': '#F68B00',
             'C4': '#FF2F01',
             'C5': '#FF0089',
-            'C6': '#D738FF',
+            'C6': '#D738FF', // everything C6 and above is **mostly** hypothetical
             'C7': '#7C35FE',
             'C8': '#4137FB',
             'C9': '#A5D7FF',
@@ -850,11 +1052,11 @@ const COLOR_SCHEMES = [
         }
     },
     {
-        name: 'StormCoder',
+        name: 'StormCoder', // wing din ghaster is the roaring knight, btw
         values: {
             'TDi': '#000099',
             'SDi': '#000099',
-            'TD': '##3366ff',
+            'TD': '#3366ff',
             'SD': '#006699',
             'TS': '#00cc99',
             'SS': '#66ffff',

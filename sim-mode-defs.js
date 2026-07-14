@@ -12,7 +12,7 @@ const SIM_MODE_WesternHemisphere = 7; // The average conditions for any Western 
 const SIM_MODE_EasternHemisphere = 8; // The average conditions for any Eastern Hemisphere basin
 const SIM_MODE_NorthAtlantic = 9; // North Atlantic Climate
 const SIM_MODE_SouthAtlantic = 10; // South Atlantic Climate
-const SIM_MODE_Mediterranean = 11; // Mediterranean Climate
+const SIM_MODE_Mediterranean = 11; // Mediterranean Climate. Made more realistic by me! (Budza)
 const SIM_MODE_EasternPacific = 12; // Eastern Pacific Climate
 const SIM_MODE_CentralPacific = 13; // Central Pacific Climate
 const SIM_MODE_WesternPacific = 14; // Western Pacific Climate 
@@ -362,7 +362,7 @@ SPAWN_RULES[SIM_MODE_SouthAtlantic].doSpawn = function(b){
 };
 SPAWN_RULES[SIM_MODE_Mediterranean].doSpawn = function(b){
     // tropical waves
-    if(random()<0.0015*sq((seasonalSine(b.tick)+1)/2)) b.spawnArchetype('tw');
+    if(random()<0.00325*sq((seasonalSine(b.tick)+1)/2)) b.spawnArchetype('tw');
 
     // extratropical cyclones
     if(random()<0.02-0.002*seasonalSine(b.tick)) b.spawnArchetype('ex');
@@ -1127,9 +1127,9 @@ ENV_DEFS[SIM_MODE_WILD].SSTAnomaly = {
 };
 ENV_DEFS[SIM_MODE_MEGABLOBS].SSTAnomaly = {
     modifiers: {
-        r: 7,
-        bigBlobBase: 1.8,
-        bigBlobExponentThreshold: 1
+        r: 8,
+        bigBlobBase: 4.4,
+        bigBlobExponentThreshold: 0.6
     }
 };
 ENV_DEFS[SIM_MODE_EXPERIMENTAL].SSTAnomaly = {};
@@ -1304,10 +1304,10 @@ ENV_DEFS[SIM_MODE_SouthAtlantic].SST = {
 ENV_DEFS[SIM_MODE_Mediterranean].SST = {
     version:1,
     modifiers: {
-        offSeasonPolarTemp: 3,
-        peakSeasonPolarTemp: 12,
-        offSeasonTropicsTemp: 16,
-        peakSeasonTropicsTemp: 29
+        offSeasonPolarTemp: 4,
+        peakSeasonPolarTemp: 13,
+        offSeasonTropicsTemp: 13,
+        peakSeasonTropicsTemp: 27.4
     }
 };
 ENV_DEFS[SIM_MODE_EasternPacific].SST = {

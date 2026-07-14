@@ -189,9 +189,9 @@ function draw(){
         fill(255);
         textSize(24);
         textAlign(LEFT,TOP);
-        text("The program has committed a crime and will now cease to exist. :(",width/16,height/8);
+        text("The program has committed a federal crime and will now cease to exist, as the crime deserves the death penalty. :(",width/16,height/8);
         textSize(15);
-        text(err.stack,width/16,height/4);
+        text(err.stack,width/14,height/3.5);
         console.error(err);
         noLoop();
     }
